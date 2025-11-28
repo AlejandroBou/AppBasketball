@@ -179,7 +179,7 @@ Todos los recursos están centralizados en archivos XML:
 
 ---
 
-## 📐 Arquitectura de la Aplicación
+## Arquitectura de la Aplicación
 
 ```
 BasketballScoreApp/
@@ -212,7 +212,7 @@ BasketballScoreApp/
 
 ---
 
-## 🎨 Diseño Visual
+## Diseño Visual
 
 ### Paleta de Colores (Estilo NBA)
 
@@ -237,14 +237,14 @@ BasketballScoreApp/
 
 ---
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
 ### MainActivity - Pantalla Principal
-![MainActivity](screenshots/main_activity.png)
+![MainActivity](Capturas/Captura de pantalla 2025-11-28 095335.png)
 *Pantalla principal con marcadores y controles de puntuación*
 
 ### ScoreActivity - Resultados Finales
-![ScoreActivity](screenshots/score_activity.png)
+![ScoreActivity](Capturas/Captura de pantalla 2025-11-28 094912.png)
 *Pantalla de resultados con mensaje del ganador*
 
 ---
