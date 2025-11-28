@@ -240,11 +240,11 @@ BasketballScoreApp/
 ## Capturas de Pantalla
 
 ### MainActivity - Pantalla Principal
-![AppBaskektball](Capturas/Captura de pantalla 2025-11-28 095335.png)
+![AppBasketball](Capturas/Captura%20de%20pantalla%202025-11-28%20095335.png)
 *Pantalla principal con marcadores y controles de puntuación*
 
 ### ScoreActivity - Resultados Finales
-![AppBasketball](Capturas/Captura de pantalla 2025-11-28 094912.png)
+![AppBasketball](Capturas/Captura%20de%20pantalla%202025-11-28%20094912.png)
 *Pantalla de resultados con mensaje del ganador*
 
 ---
