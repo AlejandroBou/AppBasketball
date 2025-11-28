@@ -1,4 +1,4 @@
-# 🏀 Basketball Score App
+#  Basketball Score App
 
 Aplicación Android para gestionar el marcador de un partido de baloncesto en tiempo real.
 
@@ -7,7 +7,7 @@ Desarrollo de Aplicaciones Móviles
 
 ---
 
-## 📱 Descripción
+##  Descripción
 
 Basketball Score App es una aplicación completa desarrollada en Android Studio que permite gestionar de forma intuitiva el marcador de un partido de baloncesto. La aplicación cuenta con dos pantallas principales que trabajan conjuntamente para ofrecer una experiencia profesional de seguimiento de partidos.
 
@@ -23,7 +23,7 @@ Basketball Score App es una aplicación completa desarrollada en Android Studio 
 
 ---
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
 ### MainActivity - Pantalla Principal
 
@@ -249,7 +249,7 @@ BasketballScoreApp/
 
 ---
 
-## 🔍 Validaciones Implementadas
+##  Validaciones Implementadas
 
 ### 1. Validación de Puntuación Mínima
 ```java
@@ -280,7 +280,7 @@ if (savedInstanceState != null) {
 
 ---
 
-## 📋 Requisitos del Sistema
+##  Requisitos del Sistema
 
 - **Android Studio**: Hedgehog (2023.1.1) o superior
 - **Minimum SDK**: API 24 (Android 7.0 Nougat)
@@ -291,7 +291,7 @@ if (savedInstanceState != null) {
 
 ---
 
-## 🚀 Instalación y Ejecución
+##  Instalación y Ejecución
 
 ### 1. Clonar el Repositorio
 ```bash
@@ -312,12 +312,12 @@ cd basketball-score-app
 
 ### 4. Ejecutar la Aplicación
 - Conecta un dispositivo Android o inicia un emulador
-- Click en el botón "Run" (▶️) o presiona `Shift + F10`
+- Click en el botón "Run"o presiona `Shift + F10`
 - Selecciona el dispositivo de destino
 
 ---
 
-## 🧪 Casos de Prueba
+##  Casos de Prueba
 
 ### Test 1: Suma de Puntos
 - ✅ Presionar +1 incrementa el marcador en 1
@@ -352,60 +352,7 @@ cd basketball-score-app
 
 ---
 
-## 📚 Buenas Prácticas Aplicadas
-
-### ✅ Nomenclatura Clara
-```java
-// Variables descriptivas
-private int scoreLocal;
-private int scoreVisitante;
-
-// Métodos con nombres claros
-private void addPointsLocal(int points)
-private void subtractPointsVisitante(int points)
-private void navigateToResults()
-```
-
-### ✅ Código Comentado
-```java
-/**
- * Añade puntos al equipo Local
- * @param points Número de puntos a añadir
- */
-private void addPointsLocal(int points) {
-    scoreLocal += points;
-    updateScoreDisplay();
-}
-```
-
-### ✅ Uso de Constantes
-```java
-// Constantes para Intent extras
-public static final String EXTRA_SCORE_LOCAL = "extra_score_local";
-
-// Constantes para estado
-private static final String STATE_SCORE_LOCAL = "state_score_local";
-```
-
-### ✅ Gestión de Memoria
-```java
-@Override
-protected void onDestroy() {
-    super.onDestroy();
-    // Limpiar binding para evitar memory leaks
-    binding = null;
-}
-```
-
-### ✅ Código Limpio
-- Sin código muerto
-- Sin imports innecesarios
-- Estructura clara y organizada
-- Un método por responsabilidad
-
----
-
-## 🎓 Conceptos Aprendidos
+##  Conceptos Aprendidos
 
 Este proyecto demuestra el dominio de los siguientes conceptos:
 
@@ -440,20 +387,20 @@ Este proyecto demuestra el dominio de los siguientes conceptos:
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
-**Tu Nombre**  
+**Alejandro Martinez Bou**  
 Desarrollo de Aplicaciones Móviles - 1er Trimestre
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto es un trabajo académico desarrollado como parte de la asignatura de Desarrollo de Aplicaciones Móviles.
 
 ---
 
-## 🙏 Agradecimientos
+##  Agradecimientos
 
 - Material Design Guidelines
 - Android Developers Documentation
@@ -461,15 +408,3 @@ Este proyecto es un trabajo académico desarrollado como parte de la asignatura 
 - Profesor/a de la asignatura
 
 ---
-
-## 📞 Contacto
-
-Si tienes preguntas o sugerencias sobre el proyecto:
-
-- 📧 Email: tu.email@ejemplo.com
-- 💼 LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- 🐱 GitHub: [@tu-usuario](https://github.com/tu-usuario)
-
----
-
-**⭐ Si te gusta este proyecto, dale una estrella en GitHub!**
