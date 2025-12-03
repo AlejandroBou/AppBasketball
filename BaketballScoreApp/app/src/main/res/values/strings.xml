@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Basketball Score</string>
+
+    <!-- MainActivity -->
+    <string name="team_local">Local</string>
+    <string name="team_visitante">Visitante</string>
+    <string name="score_initial">0</string>
+    <string name="btn_plus_one">+1</string>
+    <string name="btn_plus_two">+2</string>
+    <string name="btn_minus_one">-1</string>
+    <string name="btn_reset_description">Resetear marcador</string>
+    <string name="btn_results_description">Ver resultados</string>
+    <string name="btn_reset_label">REINICIAR</string>
+    <string name="btn_results_label">TERMINAR</string>
+
+    <!-- ScoreActivity -->
+    <string name="title_results">RESULTADO FINAL</string>
+    <string name="final_label">FINAL</string>
+    <string name="vs_label">VS</string>
+    <string name="result_local_wins">¡Ganó el equipo Local!</string>
+    <string name="result_visitante_wins">¡Ganó el equipo Visitante!</string>
+    <string name="result_tie">¡Empate!</string>
+    <string name="btn_back">Volver</string>
+    <string name="trophy_description">Trofeo</string>
+</resources>

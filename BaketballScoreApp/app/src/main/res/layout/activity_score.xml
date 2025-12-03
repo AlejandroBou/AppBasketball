@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout principal de la pantalla de resultados (ScoreActivity).
+
+    Este archivo define toda la interfaz donde se muestran:
+    - Los marcadores finales del equipo Local y Visitante.
+    - El mensaje indicando el ganador o si hubo empate.
+    - Un botón para regresar a la pantalla anterior.
+
+    Está envuelto en la etiqueta <layout> para habilitar Data Binding.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        Contenedor raíz del layout, ocupa toda la pantalla y usa un fondo
+        oscuro acorde al estilo visual de la app. ConstraintLayout permite
+        ubicar los elementos de manera flexible y eficiente.
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A1A2E"
+        android:padding="16dp">
+
+        <!--
+            Título superior que muestra "Resultados".
+            Se centra horizontalmente y funciona como encabezado visual.
+        -->
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_results"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="#0F3460"
+            android:paddingVertical="16dp"
+            android:letterSpacing="0.15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--
+            CardView que contiene toda la información del marcador final,
+            incluyendo nombres de equipos, puntuaciones, separador visual
+            e icono + texto indicando el resultado.
+        -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFinalScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:cardBackgroundColor="#16213E"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Contenedor interno del card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="32dp">
+
+                <!--
+                    Etiqueta "FINAL".
+                    Funciona como cabecera informativa de la sección.
+                -->
+                <TextView
+                    android:id="@+id/tvFinalLabel"
+                    android:text="@string/final_label"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#7D8597"
+                    android:letterSpacing="0.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!--
+                    Contenedor horizontal para mostrar:
+                    - Equipo Local
+                    - Texto "VS"
+                    - Equipo Visitante
+                -->
+                <LinearLayout
+                    android:id="@+id/layoutScores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvFinalLabel">
+
+                    <!-- Información del equipo Local -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Nombre del equipo Local -->
+                        <TextView
+                            android:id="@+id/tvFinalTeamLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/team_local"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#4ECCA3"
+                            android:letterSpacing="0.1"/>
+
+                        <!-- Marcador final Local -->
+                        <TextView
+                            android:id="@+id/tvFinalScoreLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/score_initial"
+                            android:textSize="64sp"
+                            android:textStyle="bold"
+                            android:textColor="#4ECCA3"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Texto VS entre ambos contendientes -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs_label"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#7D8597"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_gravity="center"/>
+
+                    <!-- Información del equipo Visitante -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Nombre del equipo Visitante -->
+                        <TextView
+                            android:id="@+id/tvFinalTeamVisitante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/team_visitante"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#E94560"
+                            android:letterSpacing="0.1"/>
+
+                        <!-- Marcador final Visitante -->
+                        <TextView
+                            android:id="@+id/tvFinalScoreVisitante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/score_initial"
+                            android:textSize="64sp"
+                            android:textStyle="bold"
+                            android:textColor="#E94560"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--
+                    Línea divisoria que separa el marcador del mensaje final.
+                -->
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="#0F3460"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/layoutScores"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!--
+                    Sección del resultado final:
+                    - Icono de trofeo
+                    - Texto indicando ganador o empate
+                -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <!-- Icono principal del resultado -->
+                    <ImageView
+                        android:id="@+id/ivTrophy"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/star_big_on"
+                        app:tint="#FFD700"
+                        android:contentDescription="@string/trophy_description"/>
+
+                    <!-- Mensaje final (Ganó Local, Ganó Visitante, Empate) -->
+                    <TextView
+                        android:id="@+id/tvResultMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/result_tie"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:gravity="center"
+                        android:letterSpacing="0.05"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--
+            Botón para regresar a la pantalla anterior.
+            Se coloca al fondo de la vista y se presenta dentro de un CardView
+            para dar la sensación de botón elevado y moderno.
+        -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#0F3460"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Contenido del botón Back -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <!-- Icono de volver -->
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:background="@drawable/button_control_bg"
+                    android:contentDescription="@string/btn_back"
+                    app:tint="#4ECCA3"
+                    android:scaleType="centerInside"
+                    android:padding="12dp"/>
+
+                <!-- Texto descriptivo del botón -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_back"
+                    android:textColor="#4ECCA3"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:letterSpacing="0.1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
