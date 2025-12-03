@@ -7,10 +7,6 @@ Desarrollo de Aplicaciones Móviles
 
 ---
 
-##  Descripción
-
-Basketball Score App es una aplicación completa desarrollada en Android Studio que permite gestionar de forma intuitiva el marcador de un partido de baloncesto. La aplicación cuenta con dos pantallas principales que trabajan conjuntamente para ofrecer una experiencia profesional de seguimiento de partidos.
-
 ### Características Principales
 
 - ✅ **Gestión dinámica de puntuación** para equipos Local y Visitante
