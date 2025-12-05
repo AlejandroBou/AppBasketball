@@ -400,7 +400,5 @@ Este proyecto es un trabajo académico desarrollado como parte de la asignatura 
 
 - Material Design Guidelines
 - Android Developers Documentation
-- Comunidad de Stack Overflow
-- Profesor/a de la asignatura
 
 ---
